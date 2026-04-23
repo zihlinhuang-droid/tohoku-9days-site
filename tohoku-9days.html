@@ -296,7 +296,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 /* ---------- Day 飯店連結 ---------- */
-.day__hotel-wrap { margin-bottom: 22px; }
+.day__hotel-wrap { margin-bottom: 22px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .day__hotel-link {
   display: inline-flex; align-items: center; gap: 8px;
   padding: 9px 15px;
@@ -1908,6 +1908,10 @@ const itineraryData = [
       name: "OMO5 函館",
       mapLink: "https://maps.google.com/?q=OMO5+函館"
     },
+    dayMap: {
+      src: "images/shared/hakodate-map.jpg",
+      label: "函館地圖"
+    },
     schedule: [
       {
         type: "fixed",
@@ -2110,6 +2114,10 @@ const itineraryData = [
     hotel: {
       name: "OMO5 函館",
       mapLink: "https://maps.google.com/?q=OMO5+函館"
+    },
+    dayMap: {
+      src: "images/shared/hakodate-map.jpg",
+      label: "函館地圖"
     },
     schedule: [
       {
@@ -2444,22 +2452,21 @@ function renderDayCover(day) {
 }
 
 /* ---------- Day Hotel ---------- */
-function renderDayHotel(hotel) {
-  if (!hotel || !hotel.name) return "";
-  if (hotel.mapLink) {
-    return `
-      <div class="day__hotel-wrap">
-        <a class="day__hotel-link is-link" href="${escapeHTML(hotel.mapLink)}" target="_blank" rel="noopener">
-          ${escapeHTML(hotel.name)}
-        </a>
-      </div>
-    `;
-  }
-  return `
-    <div class="day__hotel-wrap">
-      <span class="day__hotel-link">${escapeHTML(hotel.name)}</span>
-    </div>
-  `;
+function renderDayHotel(day) {
+  const hotel = day && day.hotel;
+  const hotelHtml = hotel && hotel.name
+    ? (hotel.mapLink
+        ? `<a class="day__hotel-link is-link" href="${escapeHTML(hotel.mapLink)}" target="_blank" rel="noopener">${escapeHTML(hotel.name)}</a>`
+        : `<span class="day__hotel-link">${escapeHTML(hotel.name)}</span>`)
+    : "";
+
+  const dm = day && day.dayMap;
+  const mapHtml = dm && dm.src
+    ? `<button class="btn-chip btn-chip--image" data-image-src="${escapeHTML(dm.src)}" data-image-title="${escapeHTML(dm.label || "地圖")}">🗺️ ${escapeHTML(dm.label || "地圖")}</button>`
+    : "";
+
+  if (!hotelHtml && !mapHtml) return "";
+  return `<div class="day__hotel-wrap">${hotelHtml}${mapHtml}</div>`;
 }
 
 /* ---------- Day Tabs ---------- */
@@ -2550,7 +2557,7 @@ function renderDays() {
 
           <div class="day__module">
             ${renderDayCover(day)}
-            ${renderDayHotel(day.hotel)}
+            ${renderDayHotel(day)}
             ${renderDayTabs(idx)}
             ${renderDayPanels(day)}
           </div>
