@@ -1,0 +1,1702 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="zh-Hant"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;meta charset="UTF-8" /&gt;</span></p>
+<p class="p1"><span class="s1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" /&gt;</span></p>
+<p class="p1"><span class="s1">&lt;meta name="theme-color" content="#fbf8f5" /&gt;</span></p>
+<p class="p1"><span class="s1">&lt;title&gt;日本東北・北海道 9 天行程&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1">&lt;style&gt;</span></p>
+<p class="p1"><span class="s1">/* =========================================================</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>東北春天旅行手帳 — Mobile First</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>主色：米白、櫻花粉、霧灰粉、柔和灰藍、淡霧綠</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>========================================================= */</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">:root {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>--color-bg: #fbf8f5;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>--color-bg-soft: #f4ecea;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>--color-card: #ffffff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>--color-sakura: #e8c3c6;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>--color-sakura-soft: #f6e4e5;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>--color-blue: #b9c7d2;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>--color-blue-soft: #e6ecf0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>--color-green: #cbd6c8;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>--color-green-soft: #e6ede2;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>--color-text: #3a3538;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>--color-text-soft: #6e6669;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>--color-text-light: #9a9295;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>--color-border: #ece4e2;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>--color-accent: #b8848a;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>--shadow-card: 0 2px 10px rgba(90, 70, 75, 0.05);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>--shadow-soft: 0 6px 24px rgba(90, 70, 75, 0.08);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>--radius: 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>--radius-sm: 10px;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>--max-width: 720px;<span class="Apple-converted-space">  </span>/* 手機優先 → 桌機也不拉太寬，閱讀舒適 */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>--font-sans: "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", "Hiragino Sans", "Helvetica Neue", Arial, sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>--font-serif: "Noto Serif TC", "Songti TC", "PMingLiU", Georgia, serif;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }</span></p>
+<p class="p1"><span class="s1">html { scroll-behavior: smooth; }</span></p>
+<p class="p1"><span class="s1">body {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-family: var(--font-sans);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-text);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background: var(--color-bg);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>line-height: 1.8;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 16px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>-webkit-font-smoothing: antialiased;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>-moz-osx-font-smoothing: grayscale;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>overflow-x: hidden;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">img { max-width: 100%; display: block; }</span></p>
+<p class="p1"><span class="s1">a { color: inherit; text-decoration: none; }</span></p>
+<p class="p1"><span class="s1">button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.container { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">/* ---------- Hero ---------- */</span></p>
+<p class="p1"><span class="s1">.hero {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>position: relative;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 56px 20px 44px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background:</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>radial-gradient(ellipse at 20% 0%, var(--color-sakura-soft) 0%, transparent 55%),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>radial-gradient(ellipse at 90% 100%, var(--color-green-soft) 0%, transparent 55%),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>var(--color-bg);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>overflow: hidden;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.hero::before {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>content: "";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>position: absolute; inset: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background-image:</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>radial-gradient(circle at 15% 30%, rgba(232, 195, 198, 0.22) 0, rgba(232, 195, 198, 0) 2px),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>radial-gradient(circle at 70% 60%, rgba(232, 195, 198, 0.18) 0, rgba(232, 195, 198, 0) 2px),</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>radial-gradient(circle at 40% 80%, rgba(185, 199, 210, 0.18) 0, rgba(185, 199, 210, 0) 2px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background-size: 42px 42px, 56px 56px, 72px 72px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>pointer-events: none;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.hero__label {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: inline-block;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 12px; letter-spacing: 0.32em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-accent);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-bottom: 14px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.hero__title {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-family: var(--font-serif);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: clamp(1.8rem, 6vw, 2.6rem);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-weight: 500;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>letter-spacing: 0.06em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-text);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-bottom: 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>line-height: 1.35;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.hero__subtitle {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 15px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-text-soft);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>max-width: 560px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin: 0 auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>line-height: 1.85;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.hero__meta {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-top: 18px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 13px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-text-light);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>letter-spacing: 0.08em;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">/* ---------- Day 導覽（sticky, 可橫向滑動） ---------- */</span></p>
+<p class="p1"><span class="s1">.day-nav {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>position: sticky; top: 0; z-index: 50;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background: rgba(251, 248, 245, 0.94);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>backdrop-filter: blur(10px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>-webkit-backdrop-filter: blur(10px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-bottom: 1px solid var(--color-border);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.day-nav__inner {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>gap: 8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 12px 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>overflow-x: auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>overflow-y: hidden;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>scroll-behavior: smooth;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>-webkit-overflow-scrolling: touch;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>scrollbar-width: none;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.day-nav__inner::-webkit-scrollbar { display: none; }</span></p>
+<p class="p1"><span class="s1">.day-nav__btn {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>flex: 0 0 auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 9px 16px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-radius: 999px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-text-soft);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background: transparent;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border: 1px solid var(--color-border);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>transition: all 0.25s ease;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>white-space: nowrap;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>letter-spacing: 0.03em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>min-height: 38px; <span class="Apple-converted-space">  </span>/* 手機好點擊 */</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.day-nav__btn:hover,</span></p>
+<p class="p1"><span class="s1">.day-nav__btn:active {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-accent);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-color: var(--color-sakura);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background: var(--color-sakura-soft);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.day-nav__btn.is-active {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: #fff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background: var(--color-accent);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-color: var(--color-accent);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">/* ---------- Day 大區塊 ---------- */</span></p>
+<p class="p1"><span class="s1">.day { padding: 48px 20px 56px; }</span></p>
+<p class="p1"><span class="s1">.day:nth-child(even) { background: var(--color-bg-soft); }</span></p>
+<p class="p1"><span class="s1">.day__inner { max-width: var(--max-width); margin: 0 auto; }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.day__header {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-bottom: 32px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding-bottom: 22px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-bottom: 1px dashed var(--color-border);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.day__tag {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: inline-block;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 11px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>letter-spacing: 0.32em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-accent);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-bottom: 8px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.day__date {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: block;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 13px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-text-light);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>letter-spacing: 0.08em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-bottom: 6px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.day__title {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-family: var(--font-serif);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: clamp(1.45rem, 4.5vw, 1.8rem);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-weight: 500;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-text);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-bottom: 6px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>line-height: 1.45;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.day__subtitle {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-text-soft);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-bottom: 10px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.day__hotel {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: inline-flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>gap: 6px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-top: 6px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 6px 12px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 13px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-text-soft);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background: var(--color-blue-soft);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-radius: 999px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.day__hotel::before { content: "🛏"; font-size: 13px; }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">/* ---------- 區塊標題 ---------- */</span></p>
+<p class="p1"><span class="s1">.section-heading {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: flex; align-items: baseline; gap: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin: 36px 0 18px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.section-heading__num {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-family: var(--font-serif);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 12px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-accent);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>letter-spacing: 0.25em;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.section-heading__title {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 17px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-weight: 600;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-text);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>letter-spacing: 0.05em;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.section-heading__line { flex: 1; height: 1px; background: var(--color-border); }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">/* ---------- 行程時間軸 ---------- */</span></p>
+<p class="p1"><span class="s1">.timeline {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: flex; flex-direction: column;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>gap: 14px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.trip-card {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background: var(--color-card);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border: 1px solid var(--color-border);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-radius: var(--radius);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 18px 18px 16px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>box-shadow: var(--shadow-card);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>transition: box-shadow 0.25s ease, transform 0.25s ease;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.trip-card:active { transform: scale(0.995); }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">/* 類型徽章 */</span></p>
+<p class="p1"><span class="s1">.badge {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: inline-block;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 11px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-weight: 500;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>letter-spacing: 0.08em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 3px 9px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-radius: 999px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>line-height: 1.6;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-right: 8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>vertical-align: 1px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.badge--fixed<span class="Apple-converted-space">    </span>{ color: #6a4f52; background: var(--color-sakura-soft); border: 1px solid var(--color-sakura); }</span></p>
+<p class="p1"><span class="s1">.badge--optional { color: #4a5c6b; background: var(--color-blue-soft); <span class="Apple-converted-space">  </span>border: 1px solid #c9d5df; }</span></p>
+<p class="p1"><span class="s1">.badge--backup <span class="Apple-converted-space">  </span>{ color: #4f6352; background: var(--color-green-soft);<span class="Apple-converted-space">  </span>border: 1px solid #c2d0bd; }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.trip-card__head {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>flex-wrap: wrap;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>gap: 8px 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-bottom: 10px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.trip-card__time {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: inline-flex; align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-family: var(--font-serif);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 13px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-accent);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>letter-spacing: 0.08em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background: var(--color-sakura-soft);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 3px 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-radius: 999px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.trip-card__name {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>width: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 16.5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-weight: 600;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-text);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>line-height: 1.55;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-top: 2px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.trip-card__desc {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-text);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 14.5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-top: 8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>line-height: 1.85;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.trip-card__note {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 13.5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-text-soft);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background: #faf6f3;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-left: 3px solid var(--color-sakura);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 10px 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-radius: var(--radius-sm);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-top: 12px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>line-height: 1.8;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.trip-card__note::before {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>content: "注意事項";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: inline-block;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-accent);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-weight: 600;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 12px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-right: 6px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>letter-spacing: 0.05em;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.trip-card__actions {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>flex-wrap: wrap;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>gap: 8px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-top: 14px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.btn-chip {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: inline-flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>gap: 6px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 13px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 9px 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-radius: 999px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border: 1px solid var(--color-border);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background: #fff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-text-soft);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>transition: all 0.2s ease;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>min-height: 38px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.btn-chip--map:hover,</span></p>
+<p class="p1"><span class="s1">.btn-chip--map:active {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-accent);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-color: var(--color-sakura);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background: var(--color-sakura-soft);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.btn-chip--food {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-accent);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-color: var(--color-sakura);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.btn-chip--food:hover,</span></p>
+<p class="p1"><span class="s1">.btn-chip--food:active {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background: var(--color-accent);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: #fff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-color: var(--color-accent);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">/* ---------- 補充備註清單 ---------- */</span></p>
+<p class="p1"><span class="s1">.extra-notes {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background: var(--color-card);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border: 1px solid var(--color-border);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-radius: var(--radius);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 16px 18px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>list-style: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>box-shadow: var(--shadow-card);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.extra-notes li {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>position: relative;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding-left: 18px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-text-soft);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>line-height: 1.8;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin: 6px 0;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.extra-notes li::before {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>content: "";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>position: absolute;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>left: 4px; top: 13px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>width: 6px; height: 6px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-radius: 50%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background: var(--color-sakura);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">/* ---------- 介紹卡片 ---------- */</span></p>
+<p class="p1"><span class="s1">.intro-grid {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: grid;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>grid-template-columns: 1fr;<span class="Apple-converted-space">  </span>/* 手機單欄 */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>gap: 14px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.intro-card {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background: var(--color-card);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border: 1px solid var(--color-border);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-radius: var(--radius);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>overflow: hidden;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>box-shadow: var(--shadow-card);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.intro-card__img {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>aspect-ratio: 16 / 9;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>width: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>object-fit: cover;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background: linear-gradient(135deg, var(--color-sakura-soft), var(--color-green-soft));</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.intro-card__body { padding: 14px 16px 16px; }</span></p>
+<p class="p1"><span class="s1">.intro-card__name {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 15.5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-weight: 600;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-bottom: 6px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-text);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.intro-card__desc {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 13.5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-text-soft);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>line-height: 1.8;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">/* ---------- 伴手禮 ---------- */</span></p>
+<p class="p1"><span class="s1">.souvenir-list {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: grid;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>grid-template-columns: 1fr;<span class="Apple-converted-space">  </span>/* 手機單欄 */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>gap: 12px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.souvenir-item {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background: var(--color-card);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border: 1px solid var(--color-border);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-radius: var(--radius);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 14px 16px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.souvenir-item__name {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 15px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-weight: 600;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-text);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-bottom: 4px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.souvenir-item__desc {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 13.5px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-text-soft);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>line-height: 1.8;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-bottom: 10px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.souvenir-item__map {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: inline-flex; align-items: center; gap: 4px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 12px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-accent);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 5px 11px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border: 1px solid var(--color-sakura);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-radius: 999px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>min-height: 32px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.souvenir-item__map:hover,</span></p>
+<p class="p1"><span class="s1">.souvenir-item__map:active { background: var(--color-sakura-soft); }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">/* ---------- Modal ---------- */</span></p>
+<p class="p1"><span class="s1">.modal {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>position: fixed; inset: 0; z-index: 100;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>align-items: flex-end; <span class="Apple-converted-space">  </span>/* 手機從底部滑入 */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>justify-content: center;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.modal.is-open { display: flex; }</span></p>
+<p class="p1"><span class="s1">.modal__backdrop {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>position: absolute; inset: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background: rgba(58, 53, 56, 0.45);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>backdrop-filter: blur(3px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>-webkit-backdrop-filter: blur(3px);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.modal__dialog {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>position: relative;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background: var(--color-card);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>width: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>max-width: 560px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>max-height: 88vh;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>overflow-y: auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-radius: 18px 18px 0 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 22px 20px 28px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding-bottom: calc(28px + env(safe-area-inset-bottom));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.15);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>animation: modalSlideUp 0.3s cubic-bezier(.2,.8,.2,1);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">@keyframes modalSlideUp {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>from { transform: translateY(20px); opacity: 0; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>to <span class="Apple-converted-space">  </span>{ transform: translateY(0);<span class="Apple-converted-space">    </span>opacity: 1; }</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.modal__handle {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>width: 40px; height: 4px; border-radius: 4px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background: var(--color-border);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin: 0 auto 16px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.modal__close {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>position: absolute; top: 14px; right: 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>width: 36px; height: 36px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-radius: 50%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-text-soft);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: inline-flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>align-items: center; justify-content: center;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.modal__close:hover,</span></p>
+<p class="p1"><span class="s1">.modal__close:active {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background: var(--color-sakura-soft);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-accent);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.modal__title {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-family: var(--font-serif);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 18px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-text);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-bottom: 4px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding-right: 40px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>line-height: 1.5;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.modal__subtitle {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 12px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-text-light);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-bottom: 16px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>letter-spacing: 0.12em;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.modal__list { list-style: none; }</span></p>
+<p class="p1"><span class="s1">.modal__item {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 14px 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-bottom: 1px dashed var(--color-border);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.modal__item:last-child { border-bottom: none; padding-bottom: 4px; }</span></p>
+<p class="p1"><span class="s1">.modal__item-head {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>justify-content: space-between;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>gap: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>margin-bottom: 6px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>flex-wrap: wrap;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.modal__item-name {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 15px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-weight: 600;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-text);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>flex: 1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>min-width: 0;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.modal__item-map {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 12px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-accent);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 5px 11px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border: 1px solid var(--color-sakura);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-radius: 999px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>white-space: nowrap;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.modal__item-map:hover,</span></p>
+<p class="p1"><span class="s1">.modal__item-map:active { background: var(--color-sakura-soft); }</span></p>
+<p class="p1"><span class="s1">.modal__item-desc {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 13px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-text-soft);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>line-height: 1.75;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">/* ---------- Footer ---------- */</span></p>
+<p class="p1"><span class="s1">.site-footer {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>padding: 32px 20px 44px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>color: var(--color-text-light);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>font-size: 12px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>letter-spacing: 0.1em;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>border-top: 1px solid var(--color-border);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>background: var(--color-bg);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">/* ---------- 桌機微調（手機優先，桌機只是加寬） ---------- */</span></p>
+<p class="p1"><span class="s1">@media (min-width: 720px) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.hero { padding: 80px 24px 64px; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.day { padding: 64px 24px 72px; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.trip-card { padding: 22px 24px 20px; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.intro-grid,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.souvenir-list { grid-template-columns: repeat(2, 1fr); gap: 16px; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.intro-card__img { aspect-ratio: 4 / 3; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.modal { align-items: center; }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.modal__dialog {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius: 18px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>max-height: 82vh;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding: 28px 28px 24px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>.modal__handle { display: none; }</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;!-- =========================================================</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>Hero 區塊（文字由 heroData 產生）</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>========================================================= --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;header class="hero"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="container"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;span class="hero__label" id="heroLabel"&gt;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h1 class="hero__title" id="heroTitle"&gt;&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p class="hero__subtitle" id="heroSubtitle"&gt;&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p class="hero__meta" id="heroMeta"&gt;&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/header&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;!-- Day 導覽列 --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;nav class="day-nav" id="dayNav"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="day-nav__inner" id="dayNavInner"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/nav&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;!-- Day 主內容 --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;main id="daysContainer"&gt;&lt;/main&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;!-- Modal（共用一個） --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="modal" id="foodModal" role="dialog" aria-modal="true" aria-labelledby="foodModalTitle"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="modal__backdrop" data-modal-close&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;div class="modal__dialog"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="modal__handle"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;button class="modal__close" data-modal-close aria-label="關閉"&gt;×&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h3 class="modal__title" id="foodModalTitle"&gt;附近吃食&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p class="modal__subtitle"&gt;NEARBY · FOOD &amp;amp; DRINK&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;ul class="modal__list" id="foodModalList"&gt;&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;footer class="site-footer" id="siteFooter"&gt;&lt;/footer&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;!-- =========================================================</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>★★★ 所有旅遊內容都集中在這裡 ★★★</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>只要修改下面 heroData、itineraryData、footerText 三個變數</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>整個網頁內容就會跟著更新，不需要動 HTML 結構。</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>========================================================= --&gt;</span></p>
+<p class="p1"><span class="s1">&lt;script&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">/* ===========================================================</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>【一、頁首 Hero 區塊內容】</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>=========================================================== */</span></p>
+<p class="p1"><span class="s1">const heroData = {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>label: "TOHOKU · HOKKAIDO · SPRING 2026",<span class="Apple-converted-space">  </span>// 上方英文小字</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>title: "東北・北海道 9 天春日旅行", <span class="Apple-converted-space">          </span>// 主標題</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>subtitle: "仙台、盛岡、青森、函館——沿著櫻花、港口與小城的節奏慢慢走。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>meta: "2026.04.25 — 2026.05.03 ｜ 仙台 · 松島 · 盛岡 · 青森 · 函館"</span></p>
+<p class="p1"><span class="s1">};</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">/* ===========================================================</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>【二、頁尾文字】</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>=========================================================== */</span></p>
+<p class="p1"><span class="s1">const footerText = "© 2026 Tohoku &amp; Hokkaido Travel Notes · 私人旅行手帳";</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">/* ===========================================================</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>【三、旅行主要內容 itineraryData】</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>-----------------------------------------------------------</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>每一天的資料格式：</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>day <span class="Apple-converted-space">        </span>: "Day 1",<span class="Apple-converted-space">                </span>顯示在導覽列的文字</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>date<span class="Apple-converted-space">        </span>: "2026/04/25（六）", <span class="Apple-converted-space">    </span>日期</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>title <span class="Apple-converted-space">      </span>: "台北 → 仙台", <span class="Apple-converted-space">          </span>當天主標題</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>subtitle<span class="Apple-converted-space">    </span>: "抵達仙台、賞櫻散策", <span class="Apple-converted-space">    </span>當天副標</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>hotel <span class="Apple-converted-space">      </span>: "仙台東大都會酒店", <span class="Apple-converted-space">      </span>住宿（可留空）</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>schedule<span class="Apple-converted-space">    </span>: [ ... ],<span class="Apple-converted-space">                </span>行程陣列</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>introCards<span class="Apple-converted-space">  </span>: [ ... ],<span class="Apple-converted-space">                </span>介紹卡片</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>souvenirs <span class="Apple-converted-space">  </span>: [ ... ],<span class="Apple-converted-space">                </span>伴手禮</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>extraNotes<span class="Apple-converted-space">  </span>: [ "...", "..." ]<span class="Apple-converted-space">        </span>補充備註（會顯示為小點列表）</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>-----------------------------------------------------------</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>schedule 每一筆行程的格式：</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>type<span class="Apple-converted-space">        </span>: "fixed" | "optional" | "backup"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>fixed<span class="Apple-converted-space">    </span>→ 固定（淡粉紅徽章）</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>optional → 彈性（淡灰藍徽章）</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>backup <span class="Apple-converted-space">  </span>→ 備案（淡霧綠徽章）</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>time<span class="Apple-converted-space">        </span>: "11:35–16:00" <span class="Apple-converted-space">  </span>沒有時間就寫 ""</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>place <span class="Apple-converted-space">      </span>: "地點名稱"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>mapLink <span class="Apple-converted-space">    </span>: "Google Maps 連結" <span class="Apple-converted-space">    </span>沒連結就寫 ""</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>description : "地點描述 placeholder"<span class="Apple-converted-space">  </span>可留空</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>note<span class="Apple-converted-space">        </span>: "注意事項 placeholder"<span class="Apple-converted-space">  </span>可留空</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">     </span>foods <span class="Apple-converted-space">      </span>: [ <span class="Apple-converted-space">                      </span>附近吃食（彈出視窗內容）</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                     </span>{ name: "", mapLink: "", info: "" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                   </span>]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>=========================================================== */</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">const itineraryData = [</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* ---------------- Day 1 ---------------- */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>day: "Day 1",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>date: "2026/04/25（六）",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>title: "台北 → 仙台",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>subtitle: "抵達仙台、賞櫻散策",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>hotel: "仙台東大都會酒店",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>schedule: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "11:35–16:00",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "JX862 台北 → 仙台",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（飛行交通）placeholder：可填寫登機資訊、託運行李提醒、機上餐等。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）抵達後入境、領行李、查詢機場巴士或 JR 轉乘資訊。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "抵達後前往仙台市區",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=Sendai+Station",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）仙台機場 → 仙台車站約 25 分鐘；先到飯店寄放行李。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）長輩行李建議用宅配直送飯店，可減少負擔。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{ name: "牛舌司",<span class="Apple-converted-space">                      </span>mapLink: "https://maps.google.com/?q=牛舌司+仙台",<span class="Apple-converted-space">                  </span>info: "營業時間 placeholder ｜ 評分 placeholder ｜ 推薦原因 placeholder" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{ name: "牛たんの一仙",<span class="Apple-converted-space">                </span>mapLink: "https://maps.google.com/?q=牛たんの一仙+仙台",<span class="Apple-converted-space">            </span>info: "營業時間 placeholder ｜ 評分 placeholder ｜ 推薦原因 placeholder" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{ name: "伊達の牛たん本舗 本店", <span class="Apple-converted-space">      </span>mapLink: "https://maps.google.com/?q=伊達の牛たん本舗+本店",<span class="Apple-converted-space">        </span>info: "營業時間 placeholder ｜ 評分 placeholder ｜ 推薦原因 placeholder" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{ name: "牛たん・和食 𠮷丸", <span class="Apple-converted-space">          </span>mapLink: "https://maps.google.com/?q=牛たん+吉丸+仙台", <span class="Apple-converted-space">            </span>info: "營業時間 placeholder ｜ 評分 placeholder ｜ 推薦原因 placeholder" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{ name: "仙臺牛たん 貴 努力",<span class="Apple-converted-space">          </span>mapLink: "https://maps.google.com/?q=仙臺牛たん+貴+努力",<span class="Apple-converted-space">          </span>info: "營業時間 placeholder ｜ 評分 placeholder ｜ 推薦原因 placeholder" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{ name: "牛舌料理 閣 仙台Vlandome店",<span class="Apple-converted-space">  </span>mapLink: "https://maps.google.com/?q=牛舌料理+閣+Vlandome",<span class="Apple-converted-space">          </span>info: "營業時間 placeholder ｜ 評分 placeholder ｜ 推薦原因 placeholder" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "賞櫻散策",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）當日主題：沿仙台市區賞櫻。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）花況與天氣建議出發當天再確認一次。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "西公園（仙台城旁邊）",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=西公園+仙台",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）仙台市區歷史悠久的賞櫻名所，離仙台城很近。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）步行坡度平緩，對長輩友善。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "榴岡公園（仙台站右手邊）",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=榴岡公園",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）仙台站步行可達，櫻花樹多、腹地寬，適合悠閒散步。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）如當日體力允許可夜櫻點燈再走一圈。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "backup",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "雨天備案：麵包超人博物館",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=仙台麵包超人博物館",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）室內景點，雨天或有帶小朋友時的替代方案。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）門票與時間請再確認。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "optional",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "候補：白石川堤",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=白石川堤一目千本桜",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）一目千本櫻，需搭電車前往。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）若花期剛好且體力允許再排入。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "optional",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "候補：鹽竈神社",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=鹽竈神社",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）松島附近的知名神社，賞櫻也不錯。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）可視花況與行程時間決定是否前往。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>introCards: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ title: "仙台市區初印象", image: "", text: "（placeholder）杜之都仙台，街道綠意盎然，是旅人進入東北的第一站。可填寫第一印象。" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ title: "仙台櫻花散策", <span class="Apple-converted-space">  </span>image: "", text: "（placeholder）西公園與榴岡公園是仙台市區兩大賞櫻名所，春日散步氣氛舒服。" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>souvenirs: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ name: "仙台車站伴手禮", mapLink: "https://maps.google.com/?q=仙台車站+伴手禮", description: "（placeholder）仙台車站本身就是伴手禮寶庫，可一次收集多家。" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ name: "牛舌相關伴手禮", mapLink: "", <span class="Apple-converted-space">                                          </span>description: "（placeholder）牛舌零食、真空包、仙貝等。" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ name: "其他伴手禮", <span class="Apple-converted-space">    </span>mapLink: "", <span class="Apple-converted-space">                                          </span>description: "（placeholder）可填萩の月、毛豆點心等。" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>extraNotes: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>"雨天備案：麵包超人博物館",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>"可補候補行程：白石川堤、鹽竈神社",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>"長輩行李建議宅配直送飯店"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>},</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* ---------------- Day 2 ---------------- */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>day: "Day 2",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>date: "2026/04/26（日）",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>title: "仙台",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>subtitle: "仙台市區散策",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>hotel: "仙台東大都會酒店",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>schedule: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "仙台市區",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=仙台市",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）全日放鬆散步仙台市區。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）行走路線與休息點可再補。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "早上",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "仙台朝市吃早餐",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=仙台朝市",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）老字號市場，適合早上來吃海鮮丼或定食。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）假日人潮多，建議早點到。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{ name: "coner house 仙台 咖啡", mapLink: "https://maps.google.com/?q=coner+house+仙台", info: "營業時間 placeholder ｜ 評分 placeholder ｜ 推薦原因 placeholder" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{ name: "charcoal jus", <span class="Apple-converted-space">          </span>mapLink: "https://maps.google.com/?q=charcoal+jus+仙台", info: "營業時間 placeholder ｜ 評分 placeholder ｜ 推薦原因 placeholder" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{ name: "毛豆年糕", <span class="Apple-converted-space">              </span>mapLink: "https://maps.google.com/?q=ずんだ餅+仙台", <span class="Apple-converted-space">    </span>info: "營業時間 placeholder ｜ 評分 placeholder ｜ 推薦原因 placeholder" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{ name: "cafe 青巴旦",<span class="Apple-converted-space">            </span>mapLink: "https://maps.google.com/?q=cafe+青巴旦+仙台",<span class="Apple-converted-space">  </span>info: "（店名以筆記原樣保留，上網再確認）" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{ name: "Ichifuku", <span class="Apple-converted-space">              </span>mapLink: "https://maps.google.com/?q=Ichifuku+仙台",<span class="Apple-converted-space">      </span>info: "營業時間 placeholder ｜ 評分 placeholder ｜ 推薦原因 placeholder" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "optional",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "地底之森博物館",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=仙台市富沢遺跡保存館",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）地下遺跡博物館，走動少、冷氣足，適合長輩同行。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）視當天體力決定是否前往。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "optional",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "仙台城（視體力與階梯狀況）",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=仙台城跡",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）伊達政宗騎馬像所在，展望仙台市區佳。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）要走階梯，如長輩膝蓋不便可改搭 loople 巴士接近或跳過。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "午餐",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "午餐：牛舌",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）可從牛舌名店清單中挑選。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）熱門店午餐需排隊，建議提早或錯峰。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{ name: "牛舌司",<span class="Apple-converted-space">            </span>mapLink: "https://maps.google.com/?q=牛舌司+仙台", <span class="Apple-converted-space">        </span>info: "（placeholder）填入細節。" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{ name: "伊達の牛たん本舗",<span class="Apple-converted-space">  </span>mapLink: "https://maps.google.com/?q=伊達の牛たん本舗",<span class="Apple-converted-space">    </span>info: "（placeholder）填入細節。" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "晚餐",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "晚餐：牛舌",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）再吃一次牛舌 — 可換不同店比較。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）晚上熱門店同樣建議訂位。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{ name: "仙臺牛たん 貴 努力", <span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=仙臺牛たん+貴+努力", <span class="Apple-converted-space">      </span>info: "（placeholder）填入細節。" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{ name: "牛舌料理 閣 Vlandome店", <span class="Apple-converted-space">    </span>mapLink: "https://maps.google.com/?q=牛舌料理+閣+Vlandome",<span class="Apple-converted-space">    </span>info: "（placeholder）填入細節。" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>introCards: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ title: "仙台朝市",<span class="Apple-converted-space">            </span>image: "", text: "（placeholder）仙台在地早市風景，海鮮與家常小吃聚集之地。" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ title: "地底之森 / 仙台城", <span class="Apple-converted-space">  </span>image: "", text: "（placeholder）兩個彈性景點：前者是室內博物館，後者是仙台象徵城跡。" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>souvenirs: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ name: "牛舌相關伴手禮", mapLink: "", <span class="Apple-converted-space">                                        </span>description: "（placeholder）牛舌仙貝、真空包、香脆零食。" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ name: "仙台車站伴手禮", mapLink: "https://maps.google.com/?q=仙台車站+伴手禮", description: "（placeholder）離仙台前可一次收齊。" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ name: "其他 placeholder", mapLink: "",<span class="Apple-converted-space">                                      </span>description: "（placeholder）毛豆點心、萩の月等。" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>extraNotes: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>"地底之森 / 仙台城保留彈性安排",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>"長輩行走時間較長時，安排 1–2 次咖啡休息",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>"午晚餐牛舌盡量排不同店比較口感"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>},</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* ---------------- Day 3 ---------------- */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>day: "Day 3",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>date: "2026/04/27（一）",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>title: "仙台 → 松島 → 盛岡",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>subtitle: "松島海岸、移動至盛岡",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>hotel: "Dormy Inn Morioka",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>schedule: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "08:30",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "出發前往松島",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=松島",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）仙台 → 松島，交通方式（自駕 / JR 仙石線）placeholder。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）自駕需確認停車位置；公共交通需查班次。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "optional",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "鹽竈神社",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=鹽竈神社",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）松島附近的古社，可看花況決定是否前往。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）需爬石階，對長輩不一定友善。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "西行戻しの松公園（登高望松島海岸）",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=西行戻しの松公園",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）俯瞰松島灣的觀景公園，天氣好時視野極佳。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）園內有坡道，慢走約 15–20 分鐘。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "中午",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "松島市場",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=松島さかな市場",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）牡蠣丼、海鮮丼、現烤海產，適合中午用餐。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）假日人潮多，建議先挑定目標攤位。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{ name: "松島市場附近美食 placeholder", mapLink: "", info: "（placeholder）可列牡蠣屋、蒲鉾店等。" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "最晚 15:00",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "出發前往盛岡",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=盛岡",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）自駕 / 新幹線路線 placeholder。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）晚班交通若誤點會影響晚餐，建議抓時間寬鬆。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "松島到盛岡約兩個半小時",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）交通時間提醒，路上可安排短暫休息。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）自駕者建議中途服務區休息一次。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "晚上",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "抵達盛岡",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=Dormy+Inn+Morioka",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）抵達後 check in、晚餐、休息。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）Dormy Inn 夜鳴蕎麥是亮點，可留胃。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{ name: "盛岡晚餐 placeholder", mapLink: "", info: "（placeholder）可列冷麵、じゃじゃ麺名店。" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>introCards: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ title: "松島海岸",<span class="Apple-converted-space">            </span>image: "", text: "（placeholder）日本三景之一，灣內星羅散布小島。" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ title: "西行戻しの松公園", <span class="Apple-converted-space">  </span>image: "", text: "（placeholder）登高眺望松島海岸的絕佳觀景點。" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>souvenirs: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ name: "松島相關名產 placeholder", mapLink: "", description: "（placeholder）笹蒲鉾、牡蠣煎餅、最中等。" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ name: "盛岡名產 placeholder", <span class="Apple-converted-space">    </span>mapLink: "", description: "（placeholder）南部鐵器、地酒、冷麵外帶包。" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>extraNotes: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>"松島段保留彈性，依花況與體力再決定停留時間",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>"交通方式（自駕 / JR）請再依當日情況確認",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>"盛岡 Dormy Inn 夜鳴蕎麥可留胃"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>},</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* ---------------- Day 4 ---------------- */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>day: "Day 4",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>date: "2026/04/28（二）",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>title: "盛岡 → 青森屋",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>subtitle: "盛岡市區散策、前往青森屋",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>hotel: "青森屋",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>schedule: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "石割櫻",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=石割桜",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）從巨石裂縫生長的老櫻，盛岡代表景點。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）位於盛岡地方裁判所前，步行即達。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "岩手銀行紅磚館",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=岩手銀行赤レンガ館",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）明治時期的紅磚建築，室內展覽氣氛很好。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）館內有 cafe，可順便休息。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "盛岡城跡公園",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=盛岡城跡公園",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）花崗岩石垣與春櫻並陳，慢走很舒服。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）園內不大，步道平緩，適合長輩。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "盛岡八幡宮",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=盛岡八幡宮",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）盛岡代表神社，朱色殿宇漂亮。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）距離市中心稍遠，可安排順路或車接。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "中午",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "東家蕎麥麵",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=東家+盛岡",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）盛岡名物「碗子蕎麥」老舖。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）碗子蕎麥份量吃得快，需留意腸胃負擔。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{ name: "福田麵包",<span class="Apple-converted-space">      </span>mapLink: "https://maps.google.com/?q=福田パン+盛岡", info: "營業 07:00–17:00 ｜ 評分 placeholder ｜ 盛岡超人氣早餐。" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{ name: "東家蕎麥麵",<span class="Apple-converted-space">    </span>mapLink: "https://maps.google.com/?q=東家+盛岡", <span class="Apple-converted-space">    </span>info: "營業時間 placeholder ｜ 評分 placeholder ｜ 碗子蕎麥老舖。" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "中午後",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "離開盛岡前往青森屋",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=星野リゾート+青森屋",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）交通方式 placeholder（自駕 / 新幹線 + 接駁）。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）青森屋 check-in 時間與晚餐時間請提前預約。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "盛岡到青森屋約兩小時",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）移動時間提醒。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）中途停留點 placeholder。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>introCards: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ title: "石割櫻",<span class="Apple-converted-space">            </span>image: "", text: "（placeholder）樹齡約 360 年的老櫻，自花崗岩縫中生長的奇景。" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ title: "盛岡城跡公園",<span class="Apple-converted-space">      </span>image: "", text: "（placeholder）南部氏舊城址，現為市民公園。" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>souvenirs: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ name: "盛岡伴手禮 placeholder", mapLink: "", description: "（placeholder）南部鐵器、地酒、冷麵外帶包。" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ name: "其他 placeholder",<span class="Apple-converted-space">        </span>mapLink: "", description: "（placeholder）可填福田麵包等。" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>extraNotes: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>"可補各景點步行順序 placeholder",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>"可補停車 / 交通 placeholder",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>"青森屋入住時間與晚餐時段建議提前確認"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>},</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* ---------------- Day 5 ---------------- */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>day: "Day 5",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>date: "2026/04/29（三）",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>title: "奧入瀨溪流、十和田湖、弘前、青森",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>subtitle: "奧入瀨溪流與弘前",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>hotel: "SharCul Aomori",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>schedule: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "奧入瀨溪流",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=奥入瀬渓流",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）約 14 公里的溪流步道，春天嫩葉很美。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）步道與車道並行處請注意安全。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "十和田湖",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=十和田湖",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）奧入瀨溪流源頭，湖畔風景靜謐。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）湖畔風大，建議帶防風外套。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "optional",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "步行：奧入瀨溪流館至石ヶ戸休息所",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=奥入瀬渓流館",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）較緩和的一段，適合初學者與長輩。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）全程步行 placeholder 分鐘。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "optional",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "改走：雲井瀑布一帶（這段最美）",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=雲井の滝",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）奧入瀨最精華段，瀑布集中。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）視體力與時間決定走哪段。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "中午",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "Kattaya Mizuumitei 湖畔みずうみ亭",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=湖畔みずうみ亭",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）十和田湖畔餐廳，提供當地料理。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）旺季可能需候位。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{ name: "十和田湖周邊美食 placeholder", mapLink: "", info: "（placeholder）湖畔幾家餐廳可填入。" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "青森",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=青森市",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）前往青森市區。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）移動距離較長，中途安排休息。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "廣田神社",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=広田神社+青森",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）青森市區的神社，環境安靜。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）步行即達。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "中町小巷街",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=中町こみせ通り",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）黑石市中町傳統街道，木造屋簷「小見世」連綿。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）從青森市區移動約 40 分鐘。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "弘前城",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=弘前城",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）東北最壯麗的賞櫻名所之一。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）若抵達已是傍晚，可走公園外圍感受氣氛。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{ name: "弘前 / 青森市區美食 placeholder", mapLink: "", info: "（placeholder）可列當地食堂與咖啡。" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>introCards: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ title: "奧入瀨溪流",<span class="Apple-converted-space">  </span>image: "", text: "（placeholder）青森代表的溪流美景，四季皆宜，春天最嫩綠。" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ title: "弘前城",<span class="Apple-converted-space">      </span>image: "", text: "（placeholder）日本賞櫻百選第一的景點，護城河花筏為一絕。" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>souvenirs: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ name: "青森蘋果相關伴手禮", mapLink: "", <span class="Apple-converted-space">                                        </span>description: "（placeholder）蘋果派、氣泡蘋果酒、果汁。" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ name: "弘前名產 placeholder", mapLink: "https://maps.google.com/?q=弘前+名產", description: "（placeholder）蘋果派地圖、Cidre 等。" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>extraNotes: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>"請補這天移動順序 placeholder",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>"可補天氣與步行強度注意事項",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>"奧入瀨與弘前行程很滿，建議抓好時間並保留彈性"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>},</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* ---------------- Day 6 ---------------- */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>day: "Day 6",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>date: "2026/04/30（四）",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>title: "青森 → 函館",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>subtitle: "青森市區散策後前往函館",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>hotel: "OMO5 函館",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>schedule: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "青森魚菜中心（古川市場）",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=青森魚菜センター",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）著名的 DIY 蓋飯市場，自由挑選配料。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）早去選擇多；可買票券逐攤蓋飯。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{ name: "古川市場周邊美食 placeholder", mapLink: "", info: "（placeholder）可填幾家海鮮丼、定食。" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "青森縣觀光物產館 ASPAM",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=青森県観光物産館アスパム",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）青森名產集散地，可快速採買伴手禮。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）近青森港，可順看海景。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "A-FACTORY",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=A-FACTORY+青森",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）青森蘋果酒工房與選物商店，氣氛很好。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）有試飲櫃台，喜歡可直接入手。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{ name: "青森站周邊咖啡 / 輕食 placeholder", mapLink: "", info: "（placeholder）可填 A-FACTORY 內餐飲或附近咖啡。" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "中午前後",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "移動",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）前往新青森站搭新幹線。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）建議預留 30 分鐘緩衝。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "15:31–16:30",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "新青森 → 新函館北斗",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=新函館北斗駅",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）北海道新幹線，約 1 小時。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）車票建議預訂指定席。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>introCards: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ title: "青森魚菜中心", image: "", text: "（placeholder）自由搭配的海鮮蓋飯文化，青森人氣景點。" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ title: "A-FACTORY", <span class="Apple-converted-space">    </span>image: "", text: "（placeholder）青森蘋果酒工房，結合選物與試飲。" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>souvenirs: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ name: "青森蘋果甜點",<span class="Apple-converted-space">              </span>mapLink: "", <span class="Apple-converted-space">                                            </span>description: "（placeholder）蘋果派、果凍、乾果等。" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ name: "A-FACTORY 可購買 items placeholder", mapLink: "https://maps.google.com/?q=A-FACTORY+青森", description: "（placeholder）蘋果酒 Cidre、選物商品。" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>extraNotes: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>"可補青森站周邊順路安排 placeholder",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>"新幹線需保留轉乘緩衝時間"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>},</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* ---------------- Day 7 ---------------- */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>day: "Day 7",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>date: "2026/05/01（五）",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>title: "函館",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>subtitle: "函館經典散策",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>hotel: "OMO5 函館",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>schedule: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "早上",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "函館朝市",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=函館朝市",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）來函館必訪的市場，海鮮丼與新鮮海產。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）朝市約早上 05:00 開始，越早越熱鬧。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{ name: "函館朝市海鮮 placeholder", mapLink: "", info: "（placeholder）可填幾家海鮮丼名店。" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "湯倉神社",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=湯倉神社",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）湯の川溫泉守護神社，靜謐有氣氛。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）位於湯の川地區，可順訪溫泉街。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "函館市",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=函館市",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）可自由安排西部地區散步。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）市內可用市電移動方便。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "中午",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "八幡坂",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=八幡坂+函館",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）函館最上相的坂道，眺望港口。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）坡度不大但累積距離，慢慢走。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{ name: "八幡坂周邊咖啡 / 甜點 placeholder", mapLink: "", info: "（placeholder）可填幾家小店。" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "英國領事館",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=函館旧イギリス領事館",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）英式洋館與玫瑰花園，下午茶名所。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）館內有咖啡廳。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "晚上",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "函館山 / 函館山纜車",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=函館山ロープウェイ",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）世界三大夜景之一，傍晚前上山。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）日落前 30 分鐘抵達最佳；風大建議保暖。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>introCards: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ title: "函館朝市",<span class="Apple-converted-space">    </span>image: "", text: "（placeholder）函館代表性海鮮市場，早起享受海味的地方。" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ title: "函館山夜景",<span class="Apple-converted-space">  </span>image: "", text: "（placeholder）世界三大夜景之一，函館象徵。" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>souvenirs: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ name: "函館甜點 placeholder", <span class="Apple-converted-space">      </span>mapLink: "", description: "（placeholder）海鹽布丁、雪印牛奶相關等。" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ name: "函館限定伴手禮 placeholder", mapLink: "", description: "（placeholder）五稜郭、金森紅磚倉庫聯名商品。" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>extraNotes: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>"請補函館山夜景與纜車注意事項 placeholder",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>"若陰天可改隔天看夜景，保留彈性"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>},</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* ---------------- Day 8 ---------------- */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>day: "Day 8",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>date: "2026/05/02（六）",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>title: "函館",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>subtitle: "紅磚倉庫與五稜郭",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>hotel: "OMO5 函館",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>schedule: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "早上",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "函館朝市",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=函館朝市",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）再訪朝市，採買最後一波。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）可買點水產當宅配寄回。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "函館市",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=函館市",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）市內自由安排。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "紅磚倉庫",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=金森赤レンガ倉庫",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）函館港邊人氣觀光景點，商店、咖啡、雜貨集中。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）假日人潮較多。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{ name: "紅磚倉庫周邊美食 placeholder", mapLink: "", info: "（placeholder）可填咖啡廳、海鮮餐廳等。" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "五稜郭公園",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=五稜郭公園",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）星形要塞，春天賞櫻名所。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）五稜郭塔展望台需另購票。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{ name: "五稜郭周邊美食 placeholder", mapLink: "", info: "（placeholder）可列幾家拉麵或甜點店。" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "晚上",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "函館市區",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=函館市",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）市區晚餐、散步。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）可安排最後一晚的名店或吃拉麵收尾。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>introCards: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ title: "金森紅磚倉庫",<span class="Apple-converted-space">  </span>image: "", text: "（placeholder）明治時代保存至今的紅磚倉庫群，現為商場與咖啡聚集地。" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ title: "五稜郭公園",<span class="Apple-converted-space">    </span>image: "", text: "（placeholder）日本唯一的星形要塞，春季賞櫻名勝。" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>souvenirs: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ name: "函館紅磚倉庫可買 items placeholder", mapLink: "https://maps.google.com/?q=金森赤レンガ倉庫", description: "（placeholder）雜貨、函館限定甜點。" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ name: "五稜郭區域伴手禮 placeholder", <span class="Apple-converted-space">      </span>mapLink: "",<span class="Apple-converted-space">                                              </span>description: "（placeholder）可填五稜郭塔內商品等。" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>extraNotes: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>"可補五稜郭公園賞景 / 塔是否加入的 placeholder",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>"最後一晚建議整理行李，準備隔天返程"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>},</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* ---------------- Day 9 ---------------- */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>day: "Day 9",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>date: "2026/05/03（日）",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>title: "函館 → 仙台 → 台北",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>subtitle: "返程日",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>hotel: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>schedule: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "新函館北斗 → 仙台站",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=仙台駅",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）北海道新幹線南下。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）車票建議預訂指定席，行李位請提前預約。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "10:53–13:29",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "（新幹線交通）",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）車程約 2 小時 36 分。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）可在車上午餐、休息。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>{ name: "仙台站周邊最後採買 / 最後用餐 placeholder", mapLink: "https://maps.google.com/?q=仙台駅+伴手禮", info: "（placeholder）牛舌便當、萩の月、毛豆點心等。" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>},</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>type: "fixed",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>time: "17:20–20:10",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>place: "JX863 仙台 → 台北",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>mapLink: "https://maps.google.com/?q=Sendai+Airport",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>description: "（placeholder）返程班機。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>note: "（placeholder）建議抵達機場 2 小時前，預留辦理手續時間。",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>foods: []</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>introCards: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ title: "返程日",<span class="Apple-converted-space">    </span>image: "", text: "（placeholder）最後一天的交通安排日，以緩衝時間為主。" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ title: "旅程收尾",<span class="Apple-converted-space">  </span>image: "", text: "（placeholder）這段旅行的 highlight 回顧 placeholder。" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>souvenirs: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ name: "最後採買 placeholder", <span class="Apple-converted-space">    </span>mapLink: "", <span class="Apple-converted-space">                                          </span>description: "（placeholder）仙台站伴手禮最後補齊。" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>{ name: "仙台站伴手禮 placeholder", mapLink: "https://maps.google.com/?q=仙台駅+伴手禮", description: "（placeholder）牛舌系列、萩の月、毛豆點心。" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>extraNotes: [</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>"請補返程日緩衝時間 placeholder",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>"可補仙台站短暫停留 / 用餐 placeholder",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>"建議機場提前 2 小時報到"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>]</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>/* 想新增 Day 10？複製上面任一個 { ... } 物件貼在這後面，記得前面加逗號 */</span></p>
+<p class="p1"><span class="s1">];</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">/* ===========================================================</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>【四、以下是渲染邏輯】</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>一般情況下不需要修改。只想改內容 → 改上面的 itineraryData</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">   </span>=========================================================== */</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">/* --- 工具函式 --- */</span></p>
+<p class="p1"><span class="s1">function escapeHTML(s) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>return String(s == null ? "" : s).replace(/[&amp;&lt;&gt;"']/g, c =&gt; ({</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>"&amp;":"&amp;amp;","&lt;":"&amp;lt;","&gt;":"&amp;gt;","\"":"&amp;quot;","'":"&amp;#39;"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}[c]));</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">/* 類型文字與 class 對照 */</span></p>
+<p class="p1"><span class="s1">const TYPE_LABEL = { fixed: "固定", optional: "彈性", backup: "備案" };</span></p>
+<p class="p1"><span class="s1">const TYPE_CLASS = { fixed: "badge--fixed", optional: "badge--optional", backup: "badge--backup" };</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">/* --- 1) Hero / Footer 文字 --- */</span></p>
+<p class="p1"><span class="s1">function renderHero() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>document.getElementById("heroLabel").textContent<span class="Apple-converted-space">    </span>= heroData.label;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>document.getElementById("heroTitle").textContent<span class="Apple-converted-space">    </span>= heroData.title;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>document.getElementById("heroSubtitle").textContent = heroData.subtitle;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>document.getElementById("heroMeta").textContent <span class="Apple-converted-space">    </span>= heroData.meta;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>document.getElementById("siteFooter").textContent <span class="Apple-converted-space">  </span>= footerText;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">/* --- 2) Day 導覽列 --- */</span></p>
+<p class="p1"><span class="s1">function renderDayNav() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const inner = document.getElementById("dayNavInner");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>inner.innerHTML = itineraryData.map((d, i) =&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>`&lt;button class="day-nav__btn" data-target="day${i+1}"&gt;${escapeHTML(d.day)}&lt;/button&gt;`</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>).join("");</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">/* --- 3) 每日大區塊 --- */</span></p>
+<p class="p1"><span class="s1">function renderDays() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const container = document.getElementById("daysContainer");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>container.innerHTML = itineraryData.map((day, i) =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const idx = i + 1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const hotelBlock = day.hotel</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>? `&lt;span class="day__hotel"&gt;${escapeHTML(day.hotel)}&lt;/span&gt;`</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>: "";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const extraBlock = (day.extraNotes &amp;&amp; day.extraNotes.length)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>? `</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="section-heading"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="section-heading__num"&gt;00&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="section-heading__title"&gt;備註&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;span class="section-heading__line"&gt;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;ul class="extra-notes"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>${day.extraNotes.map(n =&gt; `&lt;li&gt;${escapeHTML(n)}&lt;/li&gt;`).join("")}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/ul&gt;`</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>: "";</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>return `</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;section class="day" id="day${idx}"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="day__inner"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;header class="day__header"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="day__tag"&gt;DAY ${String(idx).padStart(2,"0")}&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="day__date"&gt;${escapeHTML(day.date || "")}&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h2 class="day__title"&gt;${escapeHTML(day.title || "")}&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p class="day__subtitle"&gt;${escapeHTML(day.subtitle || "")}&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>${hotelBlock}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/header&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="section-heading"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="section-heading__num"&gt;01&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="section-heading__title"&gt;行程&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="section-heading__line"&gt;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="timeline"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>${(day.schedule || []).map(renderTripCard).join("")}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>${extraBlock}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="section-heading"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="section-heading__num"&gt;02&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="section-heading__title"&gt;介紹&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="section-heading__line"&gt;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="intro-grid"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>${(day.introCards || []).map(renderIntroCard).join("")}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="section-heading"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="section-heading__num"&gt;03&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="section-heading__title"&gt;伴手禮&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;span class="section-heading__line"&gt;&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;div class="souvenir-list"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>${(day.souvenirs || []).map(renderSouvenir).join("")}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/section&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}).join("");</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">/* --- 3-1) 行程卡片 --- */</span></p>
+<p class="p1"><span class="s1">function renderTripCard(item) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const typeKey = item.type || "fixed";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const badge = `&lt;span class="badge ${TYPE_CLASS[typeKey] || TYPE_CLASS.fixed}"&gt;${TYPE_LABEL[typeKey] || "固定"}&lt;/span&gt;`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const timeEl = item.time ? `&lt;span class="trip-card__time"&gt;${escapeHTML(item.time)}&lt;/span&gt;` : "";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const foodsJson = JSON.stringify(item.foods || []);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>// 按鈕：Google Maps + 附近吃食</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const mapBtn = item.mapLink</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>? `&lt;a class="btn-chip btn-chip--map" href="${escapeHTML(item.mapLink)}" target="_blank" rel="noopener"&gt;📍 Google Maps&lt;/a&gt;`</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>: "";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const foodBtn = (item.foods &amp;&amp; item.foods.length)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>? `&lt;button class="btn-chip btn-chip--food"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">         </span>data-food='${escapeHTML(foodsJson)}'</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">         </span>data-food-title="${escapeHTML(item.place)} · 附近吃食"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">         </span>🍜 附近吃食</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">       </span>&lt;/button&gt;`</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>: "";</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>return `</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;article class="trip-card"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="trip-card__head"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>${badge}${timeEl}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h4 class="trip-card__name"&gt;${escapeHTML(item.place)}&lt;/h4&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>${item.description ? `&lt;p class="trip-card__desc"&gt;${escapeHTML(item.description)}&lt;/p&gt;` : ""}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>${item.note ? `&lt;p class="trip-card__note"&gt;${escapeHTML(item.note)}&lt;/p&gt;` : ""}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>${(mapBtn || foodBtn) ? `&lt;div class="trip-card__actions"&gt;${mapBtn}${foodBtn}&lt;/div&gt;` : ""}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/article&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>`;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">/* --- 3-2) 介紹卡片 --- */</span></p>
+<p class="p1"><span class="s1">function renderIntroCard(card) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const imgTag = card.image</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>? `&lt;img class="intro-card__img" src="${escapeHTML(card.image)}" alt="${escapeHTML(card.title)}" loading="lazy" /&gt;`</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>: `&lt;div class="intro-card__img"&gt;&lt;/div&gt;`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>return `</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;article class="intro-card"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>${imgTag}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="intro-card__body"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h4 class="intro-card__name"&gt;${escapeHTML(card.title)}&lt;/h4&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="intro-card__desc"&gt;${escapeHTML(card.text || "")}&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/article&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>`;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">/* --- 3-3) 伴手禮 --- */</span></p>
+<p class="p1"><span class="s1">function renderSouvenir(s) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>return `</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="souvenir-item"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="souvenir-item__name"&gt;${escapeHTML(s.name)}&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;div class="souvenir-item__desc"&gt;${escapeHTML(s.description || "")}&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>${s.mapLink</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>? `&lt;a class="souvenir-item__map" href="${escapeHTML(s.mapLink)}" target="_blank" rel="noopener"&gt;Google Maps&lt;/a&gt;`</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>: ""}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>`;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">/* --- 4) Day 導覽互動 --- */</span></p>
+<p class="p1"><span class="s1">function bindDayNav() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const navEl = document.getElementById("dayNav");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const navInner = document.getElementById("dayNavInner");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const btns = document.querySelectorAll(".day-nav__btn");</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>btns.forEach(btn =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>btn.addEventListener("click", () =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const target = document.getElementById(btn.dataset.target);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if (!target) return;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const y = target.getBoundingClientRect().top + window.pageYOffset - navEl.offsetHeight + 1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>window.scrollTo({ top: y, behavior: "smooth" });</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const dayIds = Array.from(btns).map(b =&gt; b.dataset.target);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>function updateActive() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const scrollY = window.scrollY + navEl.offsetHeight + 20;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>let current = dayIds[0];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>dayIds.forEach(id =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const el = document.getElementById(id);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if (el &amp;&amp; el.offsetTop &lt;= scrollY) current = id;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>btns.forEach(b =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const isActive = b.dataset.target === current;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>b.classList.toggle("is-active", isActive);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>// 讓當前按鈕自動捲入可視範圍（手機橫向 tab 的體驗提升）</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>if (isActive) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const btnLeft = b.offsetLeft;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const btnRight = btnLeft + b.offsetWidth;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const viewLeft = navInner.scrollLeft;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const viewRight = viewLeft + navInner.clientWidth;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>if (btnLeft &lt; viewLeft + 12) navInner.scrollTo({ left: btnLeft - 12, behavior: "smooth" });</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>else if (btnRight &gt; viewRight - 12) navInner.scrollTo({ left: btnRight - navInner.clientWidth + 12, behavior: "smooth" });</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>window.addEventListener("scroll", updateActive, { passive: true });</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>updateActive();</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">/* --- 5) Modal（附近吃食）--- */</span></p>
+<p class="p1"><span class="s1">function bindModal() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const modal = document.getElementById("foodModal");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const titleEl = document.getElementById("foodModalTitle");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>const listEl = document.getElementById("foodModalList");</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>document.querySelectorAll(".btn-chip--food").forEach(btn =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>btn.addEventListener("click", () =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>const title = btn.dataset.foodTitle || "附近吃食";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>let items = [];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>try { items = JSON.parse(btn.dataset.food || "[]"); }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>catch (e) { console.error("food JSON parse error:", e); }</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>titleEl.textContent = title;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>listEl.innerHTML = items.length</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>? items.map(item =&gt; `</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;li class="modal__item"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;div class="modal__item-head"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;span class="modal__item-name"&gt;${escapeHTML(item.name || "")}&lt;/span&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>${item.mapLink ? `&lt;a class="modal__item-map" href="${escapeHTML(item.mapLink)}" target="_blank" rel="noopener"&gt;Google Maps&lt;/a&gt;` : ""}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">              </span>${item.info ? `&lt;div class="modal__item-desc"&gt;${escapeHTML(item.info)}&lt;/div&gt;` : ""}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/li&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">          </span>`).join("")</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>: `&lt;li class="modal__item"&gt;&lt;div class="modal__item-desc" style="color:var(--color-text-light)"&gt;尚無資料，可於 itineraryData 對應景點的 foods 陣列新增。&lt;/div&gt;&lt;/li&gt;`;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>modal.classList.add("is-open");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>document.body.style.overflow = "hidden";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>modal.querySelectorAll("[data-modal-close]").forEach(el =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>el.addEventListener("click", closeModal);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>document.addEventListener("keydown", e =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>if (e.key === "Escape" &amp;&amp; modal.classList.contains("is-open")) closeModal();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>function closeModal() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>modal.classList.remove("is-open");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>document.body.style.overflow = "";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>}</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">/* --- 6) 啟動 --- */</span></p>
+<p class="p1"><span class="s1">function init() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>renderHero();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>renderDayNav();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>renderDays();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>bindDayNav();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>bindModal();</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">document.addEventListener("DOMContentLoaded", init);</span></p>
+<p class="p1"><span class="s1">&lt;/script&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+</body>
+</html>
